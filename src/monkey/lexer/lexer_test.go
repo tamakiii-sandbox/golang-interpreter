@@ -33,7 +33,7 @@ func TestNextToken(t *testing.T) {
     }
 
     if tok.Literal != tt.expectedLiteral {
-      f.Fatalf("test[%d] -literal wrong. expected=%q, got=%q", i, tt.expectedLiteral, tok.Literal)
+      t.Fatalf("test[%d] -literal wrong. expected=%q, got=%q", i, tt.expectedLiteral, tok.Literal)
     }
   }
 }
