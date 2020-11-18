@@ -8,6 +8,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN go get -u golang.org/x/lint/golint
-
 WORKDIR /work
