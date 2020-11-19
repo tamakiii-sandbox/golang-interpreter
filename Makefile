@@ -15,7 +15,7 @@ dependencies:
 build:
 
 test:
-	cd $(GOPATH)/src/monkey && go test ./lexer
+	find internal -name '*_test.go' | xargs -I@ go test @
 
 dist/waiig_code_1.4: dist/waiig_code_1.4.zip
 	unzip $< -d $(dir $@)
