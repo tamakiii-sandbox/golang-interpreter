@@ -1,4 +1,4 @@
-.PHONY: help setup dependencies build test clean
+.PHONY: help setup dependencies fmt test clean
 
 export GOPATH
 
@@ -12,7 +12,8 @@ setup: \
 dependencies:
 	type curl
 
-build:
+fmt:
+	find . -name '*.go' | xargs -I@ go fmt @
 
 test:
 	find internal -name '*_test.go' | xargs -I@ go test @

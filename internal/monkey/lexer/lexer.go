@@ -113,7 +113,7 @@ func (l *Lexer) readNumber() string {
 	for isDigit(l.ch) {
 		l.readChar()
 	}
-	return l.input[position: l.position]
+	return l.input[position:l.position]
 }
 
 func isDigit(ch byte) bool {
@@ -129,7 +129,7 @@ func newToken(tokenType token.TokenType, ch byte) token.Token {
 }
 
 func (l *Lexer) peekChar() byte {
-  if l.readPosition >= len(l.input) {
+	if l.readPosition >= len(l.input) {
 		return 0
 	} else {
 		return l.input[l.readPosition]

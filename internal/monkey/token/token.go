@@ -16,14 +16,14 @@ const (
 	INT   = "INT"   // 12345
 
 	// Calculator
-	ASSIGN = "="
-	PLUS   = "+"
-	MINUS = "-"
-	BANG = "!"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
 	ASTERISK = "*"
-	SLASH = "/"
-	LT = "<"
-	GT = ">"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
 
 	// Delimiter
 	COMMA     = ","
@@ -45,24 +45,23 @@ const (
 	RETURN   = "RETURN"
 
 	// Comparison Operators
-	EQ      = "=="
-	NOT_EQ  = "!="
+	EQ     = "=="
+	NOT_EQ = "!="
 )
 
-var keywords = map[string]TokenType {
-	"fn": FUNCTION,
-	"let": LET,
-	"true": TRUE,
-	"false": FALSE,
-	"if": IF,
-	"else": ELSE,
+var keywords = map[string]TokenType{
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
 	"return": RETURN,
 }
 
 func LookupIdent(indent string) TokenType {
-  if tok, ok := keywords[indent]; ok {
+	if tok, ok := keywords[indent]; ok {
 		return tok
 	}
 	return IDENT
 }
-
