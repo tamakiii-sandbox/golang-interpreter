@@ -18,6 +18,12 @@ const (
 	// Calculator
 	ASSIGN = "="
 	PLUS   = "+"
+	MINUS = "-"
+	BANG = "!"
+	ASTERISK = "*"
+	SLASH = "/"
+	LT = "<"
+	GT = ">"
 
 	// Delimiter
 	COMMA     = ","
