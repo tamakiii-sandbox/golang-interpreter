@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  golang:
+    build: .
+    tty: true
+    working_dir: /go/src/monkey
+    volumes:
+      - .:/work
+      - ./src/monkey:/go/src/monkey
